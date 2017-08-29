@@ -1,5 +1,5 @@
 ; Original Author: Julien Ahrens (@MrTuxracer)
-; Reviewer:  Matteo Malvica @matteomalvica
+; Addtional review and comments:  Matteo Malvica @matteomalvica
 ; Website:  http://www.matteomalvica.com
  
 global _start			
@@ -10,6 +10,7 @@ _start:
 ;
 ; int socketcall(int call, unsigned long *args);
 ; sockfd = socket(int socket_family, int socket_type, int protocol);
+;
 push 0x66 
 pop eax   ;syscall: sys_socketcall + cleanup eax register
 push 0x1 ;function call 0x01 for above syscall
