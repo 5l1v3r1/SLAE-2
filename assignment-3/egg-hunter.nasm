@@ -1,4 +1,4 @@
-; SLAE - Assignment #3: Egg Hunter (Linux/x86) - 38 bytes
+; SLAE - Assignment #3: Egg Hunter (Linux/x86) - 35 bytes
 ; Author:  Matteo Malvica (@matteomalvica)
 ; Website:  www.matteomalvica.com
 ; Least used instructions https://www.strchr.com/x86_machine_code_statistics
