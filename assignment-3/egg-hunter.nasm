@@ -2,7 +2,7 @@
 ; Author:  Matteo Malvica (@matteomalvica)
 ; Website:  www.matteomalvica.com
 ; Least used instructions https://www.strchr.com/x86_machine_code_statistics
-; egg used = AAA+AAS (0x373F) x2, which is very uncommon
+; egg used = AAA+AAS (0x373F) x2, which is uncommon
 
 global _start			
 
