@@ -23,7 +23,6 @@ else:
     
     n = rot # rot-n
     rot_hex = str((format(n, '02x')))
-    print rot_hex
     max_value_without_wrapping = 256 - n
 
     encoded_shellcode = ""
