@@ -1,7 +1,7 @@
 ; Filename: execve-stack.nasm
 ; Author:  Matteo Malvica
 ; Website:  http://www.matteomalvica.com
-;
+; Size: 35 bytes
 ; Disassembled and rewritten from msfvenom linux/x86/chmod payload
 
 		
