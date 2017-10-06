@@ -5,8 +5,8 @@ section .text
 _start:
     xor edx, edx          ; 
     push edx
-    mov esi, 0x6950E940
-    sub esi, 0x00ddba11
+    mov esi, 0x7a50e940
+    sub esi, 0x11ddba11
     push esi
     mov ebx, 0x5C354FFB
     add ebx, 0x12341234
