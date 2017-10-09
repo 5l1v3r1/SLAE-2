@@ -1,6 +1,7 @@
 
 ; Filename: execve_poly.nasm
 ; Author:  Matteo Malvica
+; Orginal shellcode: http://shell-storm.org/shellcode/files/shellcode-825.php
 ; Website:  http://www.matteomalvica.com
 ; Size: 42 bytes
 
