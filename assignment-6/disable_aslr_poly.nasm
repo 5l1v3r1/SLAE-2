@@ -38,7 +38,7 @@ _start:
     mov cx,0x2bc
     mov al,0x8
     int 0x80
-    mov ebx,eax             ; equivalent and smaller than 'mov eax, ebx'
+    mov ebx,eax                ; equivalent and smaller than 'mov eax, ebx'
     push eax
     mov dx,0x3a30
     push dx
@@ -47,8 +47,8 @@ _start:
     inc edx
     mov al,0x4              ; write syscall
     int 0x80
-    push byte 6 	    	; 'close' syscall from the stack
+    push byte 6 	    ; 'close' syscall from the stack
     pop eax             
     int 0x80
-    mov al,0x1   		    ; 'exit' syscall via direct access
+    mov al,0x1   	    ; 'exit' syscall via direct access
     int 0x80
