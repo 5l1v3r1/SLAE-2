@@ -30,7 +30,7 @@ _start:
 	push eax
 	push edi
 	push ebx
-	mov ecx, esp	    		;outro is unchanged
+	mov ecx, esp	    		;outro is left unchanged
 	mov edx, eax
 	or al, 11
 	int 0x80
