@@ -2,7 +2,7 @@
 ; Author:  Matteo Malvica
 ; Original shellcode: http://shell-storm.org/shellcode/files/shellcode-813.php
 ; Website:  http://www.matteomalvica.com
-; Size: 42 bytes
+; Size: 110 bytes
 
 global _start
 
