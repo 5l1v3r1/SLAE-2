@@ -7,7 +7,6 @@
 global _start
 
 section .text
-
 _start:
     xor eax,eax
     push eax
