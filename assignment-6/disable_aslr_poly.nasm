@@ -47,7 +47,7 @@ _start:
     inc edx
     mov al,0x4                ; write syscall
     int 0x80
-    push byte 6 	     ; 'close' syscall from the stack
+    push byte 6 	       ; 'close' syscall from the stack
     pop eax                
     int 0x80
     mov al,0x1   	      ; 'exit' syscall via direct access
