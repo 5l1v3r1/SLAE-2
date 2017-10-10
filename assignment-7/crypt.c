@@ -1,4 +1,3 @@
-
 #include <openssl/conf.h>
 #include <openssl/evp.h>
 #include <openssl/err.h>
@@ -17,7 +16,7 @@ void print_shellcode(unsigned char *shellcode) {
 
 int main(int argc, char *argv[]) {
     // 712 bit key
-    unsigned char *key = "424b1e9083e83b822ac7dbeb47be5f7d424b1e9083e83b822ac7dbeb47be5f7d424b1e9083e83b822ac7dbeb47be5f7";
+    unsigned char *key = "424b1e9083e83b822ac7dbeb47be5f7d424b1e9083e83b822ac7dbeb47be5f7d424b1e9083e83b822ac7dbeb4";
 
     // 128 bit IV
     unsigned char *iv = "01123481321345514";
